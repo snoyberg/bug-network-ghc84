@@ -1,0 +1,7 @@
+build: off
+
+test_script:
+- "$env:STACK_ROOT = 'c:\\sr'"
+- "Invoke-WebRequest 'http://www.stackage.org/stack/windows-x86_64' -OutFile 'stack.zip'"
+- "7z x -y stack.zip stack.exe"
+- "stack build network --resolver nightly"
