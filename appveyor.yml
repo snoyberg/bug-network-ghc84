@@ -10,6 +10,10 @@ environment:
     STACK_ROOT: "c:\\sr"
 
 test_script:
+- autoreconf --version
+- sed --version
+- stack exec -- sh -c "autoreconf --version"
+- stack exec -- sh -c "sed --version"
 - echo "" | stack --no-terminal build network --resolver nightly -v --ghc-options=-v3
 
 #init:
