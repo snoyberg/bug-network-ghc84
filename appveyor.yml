@@ -1,7 +1,7 @@
 build: off
 
 before_test:
-- curl -ostack.zip -L --insecure http://www.stackage.org/stack/windows
+- curl -ostack.zip -L --insecure http://www.stackage.org/stack/windows-x86_64
 - 7z x stack.zip stack.exe
 
 clone_folder: "c:\\project"
