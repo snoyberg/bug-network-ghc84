@@ -10,10 +10,12 @@ environment:
     STACK_ROOT: "c:\\sr"
 
 test_script:
-- sed --version
-- stack exec -- sh -c "autoreconf --version"
-- stack exec -- sh -c "sed --version"
-- echo "" | stack --no-terminal build network --resolver nightly -v --ghc-options=-v3
+- echo "" | stack --no-terminal unpack network
+- cd network-2.6.3.4
+- echo "" | ..\stack --no-terminal init --resolver=nightly
+- echo "" | ..\stack --no-terminal build --resolver=nightly
+- cd ..
+- echo "" | stack --no-terminal build network --resolver=nightly
 
 init:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
