@@ -10,7 +10,8 @@ environment:
     STACK_ROOT: "c:\\sr"
 
 test_script:
-- echo "" | stack --no-terminal unpack network
+- echo "" | stack --no-terminal setup --resolver=nightly > nul
+- echo "" | stack --no-terminal unpack network --resolver=nightly
 - cd network-2.6.3.5
 - echo "" | ..\stack --no-terminal init --resolver=nightly
 - echo "" | ..\stack --no-terminal build --resolver=nightly
