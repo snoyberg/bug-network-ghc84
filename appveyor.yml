@@ -14,9 +14,9 @@ test_script:
 - echo "" | stack --no-terminal unpack network --resolver=nightly
 - cd network-2.6.3.5
 - echo "" | ..\stack --no-terminal init --resolver=nightly
-- echo "" | ..\stack --no-terminal build --resolver=nightly
+- echo "" | ..\stack --no-terminal build --resolver=nightly --verbose --cabal-verbose
 - cd ..
-- echo "" | stack --no-terminal build network --resolver=nightly
+- echo "" | stack --no-terminal build network --resolver=nightly --verbose --cabal-verbose
 
 # init:
 #  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
