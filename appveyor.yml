@@ -14,20 +14,20 @@ test_script:
 
 - echo "As dependency, via local"
 - cd as-dep-local
-- echo "" | ..\stack --no-terminal build
+- echo "" | ..\stack --no-terminal build --verbose --cabal-verbose
 - cd ..
 
 - echo "As local target"
 - cd as-target
-- echo "" | ..\stack --no-terminal build
+- echo "" | ..\stack --no-terminal build --verbose --cabal-verbose
 - cd ..
 
 - echo "As dependency, via index"
 - cd as-dep-index
-- echo "" | ..\stack --no-terminal build
+- echo "" | ..\stack --no-terminal build --verbose --cabal-verbose
 - cd ..
 
 - echo "Installed from snapshot"
 - cd from-snapshot
-- echo "" | ..\stack --no-terminal build
+- echo "" | ..\stack --no-terminal build --verbose --cabal-verbose
 - cd ..
