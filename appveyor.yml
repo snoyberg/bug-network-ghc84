@@ -12,18 +12,22 @@ environment:
 test_script:
 - echo "" | stack --no-terminal setup --resolver=nightly > nul
 
-- cd as-dep-index
-- echo "" | ..\stack --no-terminal build
-- cd ..
-
+- echo "As dependency, via local"
 - cd as-dep-local
 - echo "" | ..\stack --no-terminal build
 - cd ..
 
+- echo "As local target"
 - cd as-target
 - echo "" | ..\stack --no-terminal build
 - cd ..
 
+- echo "As dependency, via index"
+- cd as-dep-index
+- echo "" | ..\stack --no-terminal build
+- cd ..
+
+- echo "Installed from snapshot"
 - cd from-snapshot
 - echo "" | ..\stack --no-terminal build
 - cd ..
