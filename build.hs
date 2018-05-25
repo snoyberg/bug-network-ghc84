@@ -1,3 +1,4 @@
+import System.Directory
 import System.Process
 import System.IO
 
@@ -24,7 +25,7 @@ main = do
   run "stack" ["--resolver", "ghc-8.4.2", "build", "network-2.7.0.0"]
 
   run "stack" ["unpack", "network-2.6.3.5"]
-  run "stack" ["build"]
+  run "stack" ["build", "--stack-yaml", "my-stack.yaml"]
 
   run "stack" ["--resolver", "nightly-2018-05-23", "build", "network"]
   run "stack" ["--resolver", "ghc-8.4.2", "build", "network-2.6.3.5"]
