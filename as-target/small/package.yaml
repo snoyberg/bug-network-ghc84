@@ -1,5 +1,0 @@
-name: small
-dependencies:
-- base
-- network
-library: {}

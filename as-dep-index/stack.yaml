@@ -1,5 +1,0 @@
-resolver: ghc-8.4.2
-packages:
-- small
-extra-deps:
-- network-2.6.3.5@rev:0

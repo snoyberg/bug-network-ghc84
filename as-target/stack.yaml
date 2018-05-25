@@ -1,4 +1,0 @@
-resolver: ghc-8.4.2
-packages:
-- small
-- ./network
