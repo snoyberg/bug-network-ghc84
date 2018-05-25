@@ -12,10 +12,8 @@ environment:
 test_script:
 - echo "" | stack --no-terminal setup --resolver=nightly-2018-05-23 > nul
 
-- stack --resolver ghc-8.4.2 ghc print-sed-loc.hs
-- .\print-sed-loc.exe
-- stack --resolver ghc-8.4.2 exec .\print-sed-loc.exe
-- stack --resolver nightly-2018-05-23 exec .\print-sed-loc.exe
+- stack --resolver ghc-8.4.2 ghc modified-sed.hs
+- stack --resolver ghc-8.4.2 runghc move-sed.hs
 
 - stack --resolver ghc-8.4.2 ghc build.hs
 - .\build.exe

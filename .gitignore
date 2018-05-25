@@ -1,2 +1,11 @@
 .stack-work/
-small.cabal
+foo.cabal
+*.hi
+*.o
+*.swp
+*.exe
+build
+*~
+network-2.6.3.5
+modified-sed
+move-sed
