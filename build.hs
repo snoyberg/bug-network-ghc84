@@ -1,4 +1,5 @@
 import System.Process
+import System.IO
 
 run :: String -> [String] -> IO ()
 run x y = do
@@ -6,6 +7,7 @@ run x y = do
   putStrLn $ unwords $ x : y
   putStrLn "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
   putStrLn "\n"
+  hFlush stdout
 
   ec <- rawSystem x y
   putStrLn ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
@@ -13,6 +15,7 @@ run x y = do
   print ec
   putStrLn ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
   putStrLn "\n"
+  hFlush stdout
 
 main :: IO ()
 main = do
