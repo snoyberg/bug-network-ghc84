@@ -8,6 +8,8 @@ clone_folder: "c:\\project"
 environment:
   global:
     STACK_ROOT: "c:\\sr"
+    # Workaround a gnarly bug https://github.com/haskell/cabal/issues/5386
+    TMP: "c:\\tmp"
 
 test_script:
 - echo "" | stack --no-terminal setup --resolver=nightly > nul
