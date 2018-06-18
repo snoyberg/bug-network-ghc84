@@ -30,9 +30,4 @@ install:
 build: off
 
 test_script:
- - mkdir \1
- - cd \1
- - cabal unpack network-2.7.0.0
- - cd network-2.7.0.0
- - runghc Setup.hs configure --user
- - runghc Setup.hs build
+ - cabal install network-2.7.0.0 --verbose
