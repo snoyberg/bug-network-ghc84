@@ -31,6 +31,5 @@ main = do
   --run "stack" ["--resolver", "ghc-8.4.3", "build", "network-2.6.3.5"]
   --run "stack" ["--resolver", "ghc-8.4.3", "build", "network-2.7.0.0"]
 
-  run "stack" ["--resolver", "ghc-8.2.2", "build", "network-2.7.0.0"]
-  run "stack" ["--resolver", "ghc-8.2.2", "setup", "--upgrade-cabal"]
+  run "stack" ["--resolver", "ghc-8.2.2", "exec", "--no-ghc-package-path", "./upgrade-cabal.sh"]
   run "stack" ["--resolver", "ghc-8.2.2", "build", "network-2.7.0.0"]
